@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Estilos específicos para la página de perfil */
+        .profile-form .form-group {
+            margin-bottom: 20px; 
+        }
+        .profile-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        .profile-form input[type="email"][disabled] {
+            background-color: #eee;
+            color: #777;
+            cursor: not-allowed;
+        }
+        .password-note {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="overlay"></div>
+
+    <nav id="sideMenu" class="side-menu">
+        <h2 id="userName">Hola, Usuario!</h2> 
+        <a href="dashboard.html" class="menu-link" id="nav-dashboard">🏠 Home</a>
+        <a href="movimiento.html" class="menu-link" id="nav-movimiento">➕ Transacciones</a>
+        <a href="balance.html" class="menu-link" id="nav-balance">📊 Análisis</a>
+        <a href="presupuestos.html" class="menu-link" id="nav-presupuestos">💰 Presupuestos</a>
+        <a href="estadisticas.html" class="menu-link" id="nav-estadisticas">📈 Estadísticas</a> 
+        <a href="exportar.html" class="menu-link" id="nav-exportar">📥 Exportar</a> 
+        <a href="alertas.html" class="menu-link" id="nav-alertas">⚠️ Alertas</a>     
+        <a href="perfil.html" class="menu-link active" id="nav-perfil">👤 Perfil</a>  
+        <a href="configuracion.html" class="menu-link" id="nav-configuracion">⚙️ Configuración</a>
+        <a href="#" id="logoutButton">➡️ Cerrar Sesión</a>
+    </nav>
+
+    <div class="container-bg">
+        <header class="dashboard-header">
+            <button id="menuToggle" class="menu-toggle">☰</button>
+            <h1 class="header-title">Perfil</h1>
+            <span class="notification-icon">🔔</span> 
+        </header>
+
+        <main class="content-wrapper">
+        
+            <section class="card">
+                <form id="profileForm" class="profile-form">
+                    
+                    <div class="form-group">
+                        <label for="perfilNombre">Nombre:</label>
+                        <input type="text" id="perfilNombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="perfilEmail">E-mail:</label>
+                        <input type="email" id="perfilEmail" disabled>
+                    </div>
+
+                    <hr style="margin: 20px 0;">
+                    
+                    <h4>Cambiar Contraseña</h4>
+                    
+                    <div class="form-group">
+                        <label for="perfilPassword">Nueva Contraseña:</label>
+                        <input type="password" id="perfilPassword" placeholder="">
+                    </div>
+                    <p class="password-note">Debe tener al menos 6 caracteres.</p>
+
+                    <div id="mensaje" class="message" style="display: none;"></div>
+                    
+                    <button type="submit" class="btn primary">Guardar</button>
+                </form>
+            </section>
+            
+        </main> </div> <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item" id="bottom-dashboard">🏠</a>
+        <a href="balance.html" class="nav-item" id="bottom-balance">📊</a>
+        <a href="movimiento.html" class="nav-item" id="bottom-movimiento">🔄</a> 
+        <a href="presupuestos.html" class="nav-item" id="bottom-presupuestos">💰</a>
+        
+        <a href="perfil.html" class="nav-item active" id="bottom-perfil">👤</a> 
+    </nav>
+    
+    <script src="app_logic.js"></script>
+    </body>
+</html>

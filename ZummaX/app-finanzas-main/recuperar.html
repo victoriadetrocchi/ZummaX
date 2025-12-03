@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-bg">
+        <header>
+            <h1>Recuperar Contraseña</h1>
+        </header>
+
+        <main class="form-card">
+            <form id="recuperarForm">
+                <p style="text-align: center; color: #555;">
+                    Por favor, ingresá tu dirección de correo electrónico. Te enviaremos un código para recuperar el acceso a tu cuenta.
+                </p>
+                
+                <input type="email" id="email" placeholder="E-mail" required>
+                
+                <div id="mensaje" class="message"></div>
+                
+                <button type="submit" class="btn primary">Enviar</button>
+            </form>
+            
+            <p class="link-text">
+                ¿Recordaste? <a href="login.html" class="link">Iniciar Sesión</a>
+            </p>
+        </main>
+    </div>
+
+    <script src="recuperar.js"></script>
+</body>
+</html>

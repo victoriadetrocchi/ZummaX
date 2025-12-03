@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Restablecer Contraseña - Zumma</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-bg">
+        <header>
+            <h1>Restablecer Contraseña</h1>
+        </header>
+
+        <main class="form-card">
+            <form id="resetForm">
+                <p style="text-align: center; color: #555;">
+                    Ingresa tu nueva contraseña. Debe tener al menos 6 caracteres.
+                </p>
+                
+                <div class="password-group">
+                    <input type="password" id="password" placeholder="Nueva Contraseña" required>
+                </div>
+                
+                <div class="password-group">
+                    <input type="password" id="confirmPassword" placeholder="Confirmar Nueva Contraseña" required>
+                </div>
+
+                <div id="mensaje" class="message"></div>
+                
+                <button type="submit" class="btn primary">Guardar Nueva Contraseña</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="reset.js"></script>
+</body>
+</html>
