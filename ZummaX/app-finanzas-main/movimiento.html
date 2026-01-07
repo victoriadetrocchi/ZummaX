@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transacciones</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"> 
+</head>
+<style>
+
+        .form-group-radio { /* Mejorar alineación de radios */
+            display: flex; gap: 10px; align-items: center;
+        }
+
+        .form-group-radio label { font-weight: normal; margin-right: 15px; }
+        .form-group-radio input[type="radio"] { width: auto; margin-right: 5px;}
+        textarea { resize: vertical; min-height: 60px; }
+        /* === [NUEVO] ESTILOS PARA EL FORMULARIO === */
+        /* 1. Convierte el formulario en un flex-column con espaciado vertical */
+        #movimientoForm {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Espacio automático ENTRE CADA ELEMENTO (fila, fecha, etc.) */
+
+        }
+        /* 2. Define la fila para Monto y Categoría */
+
+        .form-row {
+            display: flex;
+            gap: 15px; /* Espacio horizontal entre Monto y Categoría */
+
+        }
+
+        /* 3. Hace que los inputs en la fila compartan espacio (50/50) */
+        .form-row > * { /* Aplica a todos los hijos (input y select) */
+            flex: 1;
+            min-width: 0;
+            width: auto;
+
+        }
+
+        #movimientoForm .btn {
+            align-self: flex-start;
+            margin-top: 5px;
+        }
+
+
+    </style>
+<body>
+
+    <div id="overlay"></div>
+
+    <nav id="sideMenu" class="side-menu">
+        <h2 id="userName">Hola, Usuario!</h2> 
+        <a href="dashboard.html" class="menu-link" id="nav-dashboard">Home</a>
+        <a href="movimiento.html" class="menu-link" id="nav-movimiento">Transacciones</a>
+        <a href="balance.html" class="menu-link" id="nav-balance">Análisis</a>
+        <a href="presupuestos.html" class="menu-link" id="nav-presupuestos">Presupuestos</a>
+        <a href="estadisticas.html" class="menu-link" id="nav-estadisticas">Estadísticas</a> 
+        <a href="exportar.html" class="menu-link" id="nav-exportar">Exportar</a> 
+        <a href="alertas.html" class="menu-link" id="nav-alertas">Alertas</a>     
+        <a href="perfil.html" class="menu-link active" id="nav-perfil">Perfil</a>  
+        <a href="configuracion.html" class="menu-link" id="nav-configuracion">Configuración</a>
+        <a href="#" id="logoutButton">Cerrar Sesión</a>
+    </nav>
+
+    <div class="container-bg">
+        
+        <header class="dashboard-header">
+            <button id="menuToggle" class="menu-toggle">☰</button>
+            <h1 class="header-title">Transacciones</h1> 
+            <span class="notification-icon">🔔</span> 
+        </header>
+
+        <main class="content-wrapper">
+            
+            <section class="card">
+                
+                <form id="movimientoForm">
+
+        <h2>Añadir Movimiento</h2>
+
+        <div class="form-group-radio">
+            <label>Tipo:</label>
+            <input type="radio" id="tipoIngreso" name="tipo" value="ingreso" required checked>
+            <label for="tipoIngreso">Ingreso</label>
+            <input type="radio" id="tipoEgreso" name="tipo" value="egreso">
+            <label for="tipoEgreso">Egreso</label>
+        </div>
+
+        <div class="form-row" style="display: flex; gap: 15px;">
+            <input type="number" id="monto" placeholder="Monto" min="0.01" step="0.01" required style="flex: 1; margin-bottom: 0;">
+
+            <select id="categoria" required style="flex: 1; margin-bottom: 0;">
+                <option value="">Cargando...</option>
+                </select>
+        </div>
+        <input type="date" id="fecha" required>
+
+        <textarea id="descripcion" placeholder="Título" rows="3"></textarea>
+
+        <div id="mensaje" class="message" style="display:none;"></div>
+
+        <button type="submit" class="btn primary">Guardar</button> 
+</form>
+
+            </section>
+        </main> 
+        
+    </div> 
+
+    <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item" id="bottom-dashboard">🏠</a>
+        <a href="balance.html" class="nav-item" id="bottom-balance">📊</a>
+        <a href="movimiento.html" class="nav-item active" id="bottom-movimiento">🔄</a> 
+        <a href="presupuestos.html" class="nav-item" id="bottom-presupuestos">💰</a>
+        <a href="perfil.html" class="nav-item" id="bottom-perfil">👤</a>
+    </nav>
+    
+    <script src="app_logic.js"></script>
+</body>
+</html>

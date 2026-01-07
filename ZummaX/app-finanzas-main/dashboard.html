@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+<div id="overlay"></div>
+
+    <nav id="sideMenu" class="side-menu">
+        <h2 id="userName">Hola, Usuario!</h2> 
+        <a href="dashboard.html" class="menu-link" id="nav-dashboard">Home</a>
+        <a href="movimiento.html" class="menu-link" id="nav-movimiento">Transacciones</a>
+        <a href="balance.html" class="menu-link" id="nav-balance">Análisis</a>
+        <a href="presupuestos.html" class="menu-link" id="nav-presupuestos">Presupuestos</a>
+        <a href="estadisticas.html" class="menu-link" id="nav-estadisticas">Estadísticas</a> 
+        <a href="exportar.html" class="menu-link" id="nav-exportar">Exportar</a> 
+        <a href="alertas.html" class="menu-link" id="nav-alertas">Alertas</a>     
+        <a href="perfil.html" class="menu-link active" id="nav-perfil">Perfil</a>  
+        <a href="configuracion.html" class="menu-link" id="nav-configuracion">Configuración</a>
+        <a href="#" id="logoutButton">Cerrar Sesión</a>
+    </nav>
+
+    <div class="container-bg">
+        <header class="dashboard-header">
+            <button id="menuToggle" class="menu-toggle">☰</button>
+            <h1 class="header-title">ZummaX</h1>
+            <span class="notification-icon">🔔</span> 
+        </header>
+
+        <main class="content-wrapper">
+            
+            <div class="financial-summary">
+                
+                <div class="summary-box card saldo">
+                    <h3>Saldo Disponible</h3>
+                    <h2 id="saldo">$ 0.00</h2>
+                </div>
+                
+                <div class="summary-box card egresos">
+                    <h3>Gastos Totales</h3>
+                    <h2 id="egresosTotal">$ 0.00</h2>
+                </div>
+                
+                <div class="summary-box card ingresos">
+                    <h3>Ingresos Totales</h3>
+                    <h2 id="ingresosTotal">$ 0.00</h2>
+                </div>
+            </div>
+
+            <section class="recent-movements-section card">
+                <h3>Movimientos Recientes</h3>
+                <div id="movimientosList" class="movements-list">
+                    <p class="no-data">Cargando movimientos...</p>
+                </div>
+                <a href="balance.html" class="link full-width-link">>>> </a>
+            </section>
+            
+
+        </main> </div>
+        
+<nav class="bottom-nav">
+    <a href="dashboard.html" class="nav-item" id="bottom-dashboard">🏠</a>
+    <a href="balance.html" class="nav-item" id="bottom-balance">📊</a>
+    <a href="movimiento.html" class="nav-item" id="bottom-movimiento">🔄</a> 
+    <a href="presupuestos.html" class="nav-item" id="bottom-presupuestos">💰</a>
+    <a href="perfil.html" class="nav-item" id="bottom-perfil">👤</a>
+</nav>
+
+    <script src="app_logic.js"></script>
+</body>
+</html>

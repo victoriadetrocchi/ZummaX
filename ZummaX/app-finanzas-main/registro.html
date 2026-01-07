@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Zumma - Crear Cuenta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-bg">
+        <header>
+            <h1>Crear Cuenta</h1>
+        </header>
+
+        <main class="form-card">
+            <form id="registroForm"> 
+                <input type="text" id="nombre" placeholder="Nombre Completo" required>
+                
+                <input type="email" id="email" placeholder="Email" required>
+                
+                <div class="password-group">
+                    <input type="password" id="password" placeholder="Contraseña" required>
+                    <span class="password-toggle">👁</span> 
+                </div>
+
+                <div class="password-group">
+                    <input type="password" id="confirmPassword" placeholder="Confirmar Contraseña" required>
+                    <span class="password-toggle">👁</span>
+                </div>
+
+                <div id="mensaje" class="message"></div>
+
+                <button type="submit" class="btn primary">Registrarse</button>
+            </form>
+            
+            <p class="link-text">
+                ¿Ya tienes una cuenta? <a href="login.html" class="link">Ingresar</a>
+            </p>
+        </main>
+    </div>
+
+    <script src="registro.js"></script>
+</body>
+</html>
