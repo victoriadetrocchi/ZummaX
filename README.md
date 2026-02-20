@@ -80,7 +80,7 @@ Decoupled client-server architecture:
 ## 📸 Screenshots
 
 ### Dashboard
-![dashboard](./Screenshots/zumma5.png)
+![dashboard](./Screenshots/zumma4.png)
 
 ### Statistics
 ![stats](./Screenshots/zumma9.png)
